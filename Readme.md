@@ -16,6 +16,7 @@ sudo auditctl -s  # check status, pid should be 0
 sudo dnf install audit-libs audit-libs-devel libev libev-devel
 make
 sudo ./audit
+sudo auditctl -D  # clear the rules b/c even though our process ended they still get dropped in the system journal
 ```
 
 # Usage
